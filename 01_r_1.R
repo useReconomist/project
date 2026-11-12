@@ -1,17 +1,19 @@
-# vallalla 
+# valhalla 
 
 library(processx)
 
-site_dir <- ".venv/Lib/site-packages"
-bin_dir  <- file.path(site_dir, "valhalla", "bin")
-work     <- "valhalla"
-cfg_path <- file.path(work, "valhalla.json")
-tile_dir <- file.path(work, "tiles")
-pbf <- "00_country_pbf/uruguay-261028.osm.pbf"
+site_dir = ".venv/Lib/site-packages"
+bin_dir  = file.path(site_dir, "valhalla", "bin")
+work     = "valhalla"
+cfg_path = file.path(work, "valhalla.json")
+tile_dir = file.path(work, "tiles")
+
+# This is uruguay I choose it because its small
+pbf = "00_country_pbf/uruguay-261028.osm.pbf"
 
 
-dlls <- list.files(site_dir, pattern = "\\.dll$", recursive = TRUE, full.names = TRUE)
-dll_dirs <- unique(dirname(dlls[grepl("valhalla", dlls, ignore.case = TRUE)]))
+dlls = list.files(site_dir, pattern = "\\.dll$", recursive = TRUE, full.names = TRUE)
+dll_dirs = unique(dirname(dlls[grepl("valhalla", dlls, ignore.case = TRUE)]))
 Sys.setenv(PATH = paste(c(normalizePath(c(bin_dir, dll_dirs), winslash = "\\"),
                           Sys.getenv("PATH")), collapse = ";"))
 
@@ -24,7 +26,7 @@ unlink(tile_dir, recursive = TRUE)
 dir.create(tile_dir)
 
 # 3. Build con log a archivo (México tarda, no lo interrumpas)
-log_file <- file.path(work, "build.log")
+log_file = file.path(work, "build.log")
 st <- system2(file.path(bin_dir, "valhalla_build_tiles.exe"),
               c("-c", shQuote(cfg_path), shQuote(pbf)),
               stdout = log_file, stderr = log_file)
