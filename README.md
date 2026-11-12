@@ -1,5 +1,12 @@
 ## Workflow
 
+The process for use it is this, using positron canbe easy clone this work because you need a venv 
+This are the steps
+
+* 1. First-time setup: create the configuration
+* 2. First-time setup: build the graph tiles
+* 3. Every R session: start the server
+* 4. Usage
 
 ### 1. First-time setup: create the configuration
 <img src="flow_reference/p1_val.png" alt="Step 1 - Create the Valhalla configuration" width="300">
