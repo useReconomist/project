@@ -20,7 +20,9 @@ mapa = leaflet() |>
 
 mapa
 
-valh::vl_status()
+valh::vl_status(
+    server = "http://localhost:8002",
+)
 
 route = vl_route(
   loc = points,
@@ -48,7 +50,7 @@ new_route = vh_route_avoid(
   zona = zone_to_avoid,
   costing = "pedestrian",
   server = "http://localhost:8002",
-  tolerancia = 1500
+  tolerancia = 5000
 )
 
 mapa = mapa |> 

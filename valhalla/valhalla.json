@@ -10,7 +10,7 @@
     "use_lru_mem_cache": false,
     "lru_mem_cache_hard_control": false,
     "use_simple_mem_cache": false,
-    "tile_dir": "C:\\Users\\DELL\\Desktop\\valh_backend\\project\\valhalla\\tiles",
+    "tile_dir": "C:\\Users\\osorion1759\\OneDrive - ARCADIS\\Documents\\Model_valhalla\\project\\valhalla\\tiles",
     "traffic_extract": "/data/valhalla/traffic.tar",
     "admin": "/data/valhalla/admin.sqlite",
     "landmarks": "/data/valhalla/landmarks.sqlite",

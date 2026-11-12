@@ -3,7 +3,9 @@
 # First steep 
 # We need to install the library from pip or download it from
 # https://pypi.org/project/pyvalhalla/
-pip install pyvalhalla
+#pip install pyvalhalla
+# En la terminal?: uv add pyvalhalla
+
 
 # step 2
 # the library has a configuration (a json file) so we need it
