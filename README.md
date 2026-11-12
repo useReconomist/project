@@ -11,7 +11,7 @@ This are the steps.
   * Run with source: 03_call.R
 
 ### Example avoid route
-<img src="flow_reference/avoid_route.png" alt="fin other rout avoiding some polygons" width="250">
+<img src="flow_reference/avoid_route.png" alt="fin other rout avoiding some polygons" width="600">
 
 ### 1. First-time setup: create the configuration
 <img src="flow_reference/p1_val.png" alt="Step 1 - Create the Valhalla configuration" width="300">
